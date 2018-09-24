@@ -2,6 +2,8 @@
 
 shopt -s nullglob globstar
 
+icons=/usr/share/icons/gnome/24x24
+
 passmenu=$0
 indent=""
 
@@ -36,7 +38,7 @@ menudir() {
         d=${d%/}
         name=$(basename "$d")
 
-        puts "<menu id=\"passmenu-$d\" label=\"$name/\">"
+        puts "<menu id=\"passmenu-$d\" label=\"$name/\" icon=\"$icons/places/folder.png\">"
         menudir $d
         puts "</menu>"
     done
@@ -51,16 +53,16 @@ menudir() {
         name=$(basename "$fullname")
         name=${name/_/__}
 
-        puts "<menu id=\"passmenu-$f\" label=\"$name\">"
+        puts "<menu id=\"passmenu-$f\" label=\"$name\" icon=\"$icons/status/dialog-password.png\">"
         indent_incr
-        puts "<item label=\"Copy\">"
+        puts "<item label=\"Copy\" icon=\"$icons/actions/edit-copy.png\">"
         indent_incr
         puts "<action name=\"Execute\">"
         puts "<command>bash -c 'pass show -c \"$fullname\" 2>/dev/null'</command>"
         puts "</action>"
         puts "</item>"
         indent_decr
-        puts "<item label=\"Insert\">"
+        puts "<item label=\"Insert\" icon=\"$icons/actions/edit-paste.png\">"
         indent_incr
         puts "<action name=\"Execute\">"
         puts "<command>bash -c 'pass show \"$fullname\" | { IFS= read -r pass; printf %s \"\$pass\"; } | xdotool type --clearmodifiers --file -'</command>"
