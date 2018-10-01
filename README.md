@@ -19,7 +19,7 @@ Openbox configuration (usually at `~/.config/openbox/*rc.xml`):
 
     <menu>
       ...
-      <file>$$PWD/passmenu.xml</file>
+      <file>/home/.../openbox-passmenu/passmenu.xml</file>
       ...
     </menu>
 
