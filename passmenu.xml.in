@@ -5,5 +5,5 @@
     xsi:schemaLocation="http://openbox.org/ file:///usr/share/openbox/menu.xsd">
 <menu id="passmenu"
     label="Password Store"
-    execute="~/src/openbox-passmenu/passmenu.sh" />
+    execute="@DIR@/passmenu.sh" />
 </openbox_menu>
