@@ -6,18 +6,7 @@ passmenu.xml: passmenu.xml.in
 	sed -e "s:@DIR@:$$PWD:g" < $< > $@
 
 install: all
-	@echo "******************************************************************"
-	@echo ""
-	@echo "  Add the following snippet into the <menu> section in your"
-	@echo "  openbox configuration (usually at ~/.config/openbox/*rc.xml):"
-	@echo ""
-	@echo "  <menu>"
-	@echo "    ..."
-	@echo "    <file>$$PWD/passmenu.xml</file>"
-	@echo "    ..."
-	@echo "  </menu>"
-	@echo ""
-	@echo "******************************************************************"
+	@echo "Please see README.md on how to add passmenu to your openbox configuration." >&2
 
 clean:
 	rm -f passmenu.xml
