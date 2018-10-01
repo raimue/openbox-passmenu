@@ -1,6 +1,6 @@
 # openbox-passmenu
 
-This repository provides a script to provides access to the passwords saved in
+This repository provides a script to access to the passwords saved in
 the password manager [pass(1)](https://www.passwordstore.org/) directly from
 the window manager [Openbox](http://openbox.org) with a custom menu.
 
