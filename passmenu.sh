@@ -91,14 +91,16 @@ EOF
 
 puts "<separator label=\"Password Store\" />"
 menudir $pwstore
-puts "<separator />"
-puts "<item label=\"QtPass\">"
-indent_incr
-puts "<action name=\"Execute\">"
-puts_indent "<command>qtpass</command>"
-puts "</action>"
-indent_decr
-puts "</item>"
+if command -v qtpass >/dev/null 2>&1; then
+    puts "<separator />"
+    puts "<item label=\"QtPass\">"
+    indent_incr
+    puts "<action name=\"Execute\">"
+    puts_indent "<command>qtpass</command>"
+    puts "</action>"
+    indent_decr
+    puts "</item>"
+fi
 
 cat <<-EOF
 </openbox_pipe_menu>
