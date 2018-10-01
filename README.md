@@ -38,3 +38,11 @@ Also configure a keybinding to open the menu in `<keyboard>`:
 Finally, load the new configuration and try out the keybinding:
 
     $ openbox --reconfigure
+
+## Credits and License
+
+This project was inspired by [passmenu](https://git.zx2c4.com/password-store/tree/contrib/dmenu),
+a script to access the `pass` password store from [dmenu](https://tools.suckless.org/dmenu/).
+
+openbox-passmenu is licensed under the terms of the MIT license.
+Please see the LICENSE file for details.
